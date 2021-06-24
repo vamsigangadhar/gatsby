@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "./Layout";
-// import { useState, useEffect } from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { useState, useEffect } from "react";
 
 const IndexPage = () => {
   // const [data, setData] = useState([]);
@@ -14,6 +15,10 @@ const IndexPage = () => {
     <Layout pageTitle="Home Page">
       <p>I'm making this by following the Gatsby Tutorial.</p>
 
+      <StaticImage
+        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+        src="../images/gatsby.webp"
+      />
       {/* <ul>
         {data.map((post, id) => {
           return (
