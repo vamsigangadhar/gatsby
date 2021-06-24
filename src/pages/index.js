@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useState, useEffect } from "react";
 
 const IndexPage = () => {
-  // const [data, setData] = useState([]);
-  // useEffect(async () => {
-  //   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  //   const result = await response.json();
-  //   setData(result);
-  // }, []);
-  // console.log(data);
+  const [data, setData] = useState([]);
+  useEffect(async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const result = await response.json();
+    setData(result);
+  }, []);
+  console.log(data);
   return (
     <Layout pageTitle="Home Page">
       <p>I'm making this by following the Gatsby Tutorial.</p>
@@ -19,7 +19,7 @@ const IndexPage = () => {
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="../images/gatsby.webp"
       />
-      {/* <ul>
+      <ul>
         {data.map((post, id) => {
           return (
             <ul key={id}>
@@ -30,9 +30,9 @@ const IndexPage = () => {
             </ul>
           );
         })}
-      </ul> */}
+      </ul>
     </Layout>
   );
 };
-// Step 3: Export your component
+
 export default IndexPage;
